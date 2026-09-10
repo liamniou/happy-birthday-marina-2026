@@ -42,8 +42,8 @@ const Index = () => {
             {/* Back wall */}
             <div className="absolute inset-0 bg-envelope-inner rounded-t-md z-[1]" />
 
-            {/* Tickets — overflow is visible so they can rise above the envelope */}
-            <div className="absolute inset-0 z-[2]">
+            {/* Tickets — clipped below the envelope bottom, open upward so they can pop out */}
+            <div className="absolute inset-x-0 bottom-0 -top-[420px] z-[2] overflow-hidden">
               <motion.div
                 className="absolute bottom-4 left-1/2 -translate-x-1/2"
                 style={{ opacity: ticketOpacity }}
